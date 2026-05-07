@@ -1,65 +1,141 @@
+'use client'
+
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
+import BrandsCarousel from "../components/site/BrandsCarousel";
+import CTABanner from "../components/site/CTABanner";
+import HeroSlider from "../components/site/HeroSlider";
+import ProductCard from "../components/site/ProductCard";
+import ProjectCard from "../components/site/ProjectCard";
+import SectionHeading from "../components/site/SectionHeading";
+import { products } from "../lib/data/products";
+import { projects } from "../lib/data/projects";
 
 export default function Home() {
+  const featuredProducts = products.slice(0, 4);
+  const featuredProjects = projects.slice(0, 4);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div>
+      {/* Hero Slider */}
+      <HeroSlider />
+
+      {/* Products */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-end justify-between gap-8 mb-12 lg:mb-16">
+            <SectionHeading
+              label="Soluciones"
+              title="Nuestros Productos"
+              description="Soluciones constructivas de última generación para cubiertas, fachadas y estructuras ligeras."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Link
+              href="/products"
+              className="hidden md:flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors shrink-0 pb-1"
+            >
+              Ver todos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product, i) => (
+              <ProductCard key={product.slug} product={product} index={i} />
+            ))}
+          </div>
+          <div className="mt-8 md:hidden text-center">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent"
+            >
+              Ver todos los productos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="bg-primary text-primary-foreground py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-end justify-between gap-8 mb-12 lg:mb-16">
+            <SectionHeading
+              label="Portfolio"
+              title="Proyectos Destacados"
+              description="Más de 350 proyectos ejecutados en toda la Península Ibérica y Latinoamérica."
+              light
+            />
+            <Link
+              href="/projects"
+              className="hidden md:flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors shrink-0 pb-1"
+            >
+              Ver todos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {featuredProjects.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+                Sobre nosotros
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mt-3 text-foreground">
+                25 años creando estructuras que desafían lo convencional
+              </h2>
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                En Tensomembranas Ibero combinamos ingeniería de precisión con visión arquitectónica.
+                Cada proyecto es una oportunidad para explorar los límites de la construcción ligera,
+                creando espacios que inspiran y perduran.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Desde nuestra sede en Madrid, operamos en toda la Península Ibérica y Latinoamérica
+                con un equipo de ingenieros, arquitectos y técnicos especializados.
+              </p>
+              <Link
+                href="/about"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
+              >
+                Conocer más <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="aspect-4/3 rounded-lg overflow-hidden"
+            >
+              <Image
+                src="https://media.base44.com/images/public/69e07a522085db6e8cab7d34/8807dbc10_generated_901ede60.png"
+                alt="Tensomembranas Ibero - Equipo y proyectos"
+                className="w-full h-full object-cover"
+                fill
+                sizes="100vw"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Brands Carousel */}
+      <BrandsCarousel />
+
+      {/* CTA */}
+      <CTABanner />
     </div>
   );
 }
