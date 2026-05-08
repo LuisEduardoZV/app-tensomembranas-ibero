@@ -61,7 +61,7 @@ export default async function ProjectDetail({ params }: { params: Promise<PagePr
       {/* Hero */}
       <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={project.image} alt={project.title} className="w-full h-full object-cover" fill sizes="100vw" />
+          <Image src={project.image} alt={project.title} className=" object-cover" fill sizes="(max-width: 768px) 50vw, 20vw" />
           <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pb-12 pt-32">

@@ -24,14 +24,14 @@ export default function ImageGallery({ images, title = "" }: {images: string[], 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="aspect-4/3 overflow-hidden rounded-lg group"
+            className="relative aspect-4/3 overflow-hidden rounded-lg group"
           >
             <Image
               src={img}
               alt={`${title} - ${i + 1}`}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 50vw, 20vw"
               loading="eager"
             />
           </motion.button>

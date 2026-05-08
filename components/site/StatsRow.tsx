@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "350+", label: "Proyectos realizados" },
-  { value: "25", label: "Años de experiencia" },
+  { value: "20", label: "Años de experiencia" },
   { value: "12", label: "Países" },
   { value: "98%", label: "Satisfacción del cliente" },
 ];

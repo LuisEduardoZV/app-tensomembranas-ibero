@@ -31,12 +31,12 @@ export default function Footer() {
                   Tensomembranas
                 </span>
                 <span className="text-[10px] font-medium tracking-[0.3em] uppercase leading-none mt-0.5 opacity-60">
-                  Ibero
+                  Iberia
                 </span>
               </div>
             </div>
             <p className="text-sm opacity-70 leading-relaxed max-w-xs">
-              Líderes en diseño, ingeniería y construcción de estructuras tensadas y cubiertas ligeras en la Península Ibérica.
+              Empresa de arquitectura textil especializada en soluciones innovadoras de tensomembranas y membranas retráctiles.
             </p>
           </div>
 
@@ -87,16 +87,16 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 opacity-50 shrink-0" />
                 <span className="text-sm opacity-70">
-                  Calle Industria 42, 28001 Madrid, España
+                  C. del Cabo Guardia Civil Pedro Moreno Pérez, 41, 30007 Murcia, España
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 opacity-50 shrink-0" />
-                <span className="text-sm opacity-70">+34 91 123 4567</span>
+                <span className="text-sm opacity-70">+34 611 240 701</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 opacity-50 shrink-0" />
-                <span className="text-sm opacity-70">info@tensomembranas.com</span>
+                <span className="text-sm opacity-70">ventas@tensomembranasiberia.es</span>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs opacity-40">
-            © {new Date().getFullYear()} Tensomembranas Ibero. Todos los derechos reservados.
+            © {new Date().getFullYear()} Tensomembranas Iberia. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <span className="text-xs opacity-40 hover:opacity-70 transition-opacity cursor-pointer">

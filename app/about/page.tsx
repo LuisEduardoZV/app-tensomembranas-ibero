@@ -36,8 +36,8 @@ export default function About() {
       <HeroSection
         image="https://media.base44.com/images/public/69e07a522085db6e8cab7d34/8807dbc10_generated_901ede60.png"
         title="Nosotros"
-        subtitle="Sobre Tensomembranas Ibero"
-        description="25 años transformando espacios con ingeniería de precisión y visión arquitectónica."
+        subtitle="Sobre Tensomembranas Iberia"
+        description="20 años transformando espacios con ingeniería de precisión y visión arquitectónica."
         minHeight="min-h-[60vh]"
         overlay="bg-gradient-to-r from-black/75 via-black/50 to-black/40"
       />
@@ -60,19 +60,10 @@ export default function About() {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Fundada en 2001 en Madrid, Tensomembranas Ibero nació con la misión de traer las técnicas
-                  más avanzadas de construcción tensada al mercado ibérico. Desde entonces, hemos ejecutado
-                  más de 350 proyectos en 12 países.
+                  Tensomembranas Iberia es una empresa española especializada en Arquitectura Textil, enfocada en el desarrollo de soluciones modernas y funcionales mediante tensomembranas y estructuras arquitectónicas de alta calidad. Su experiencia combina diseño, innovación y tecnología para crear proyectos adaptados a diferentes necesidades y espacios.
                 </p>
                 <p>
-                  Nuestro equipo multidisciplinar de ingenieros estructurales, arquitectos y técnicos
-                  especializados trabaja con los materiales más avanzados del mercado: PTFE, ETFE, PVC
-                  de alta tenacidad y aceros especiales.
-                </p>
-                <p>
-                  Cada proyecto que emprendemos pasa por un riguroso proceso de diseño paramétrico,
-                  análisis estructural mediante elementos finitos y control de calidad en fábrica,
-                  garantizando resultados excepcionales.
+                  La empresa se beneficia de más de 20 años de experiencia y proyectos ejecutados por la empresa alemana <b>Str.ucture GmbH</b>, así como de más de 33 años de trayectoria de la marca ecuatoriana <b>Preysi</b>, reconocida por desarrollar las únicas membranas retráctiles de Latinoamérica. Esta combinación de experiencia internacional se traduce en proyectos respaldados por diseño, seguridad y tecnología de vanguardia.
                 </p>
               </div>
             </motion.div>
@@ -82,14 +73,14 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="aspect-4/3 rounded-lg overflow-hidden"
+              className="relative aspect-4/3 rounded-lg overflow-hidden"
             >
               <Image
                 src="https://media.base44.com/images/public/69e07a522085db6e8cab7d34/095c36494_generated_bc151458.png"
-                alt="Tensomembranas Ibero instalación"
-                className="w-full h-full object-cover"
+                alt="Tensomembranas Iberia instalación"
+                className="object-cover"
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
           </div>

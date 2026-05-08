@@ -41,6 +41,7 @@ export default function HeroSection({
           className="w-full h-full object-cover"
           fill
           sizes="100vw"
+          loading="eager"
         />
         <div className={`absolute inset-0 ${overlay}`} />
       </div>

@@ -19,13 +19,13 @@ export default function ProjectCard({ project, index = 0 }: {project: Proyecto, 
         href={`/projects/${project.slug}`}
         className="group block relative overflow-hidden rounded-lg"
       >
-        <div className="aspect-4/3 overflow-hidden">
+        <div className="relative aspect-4/3 overflow-hidden">
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
             fill
-            sizes="100vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 45vw, 30vw"
           />
         </div>
         {/* Overlay */}

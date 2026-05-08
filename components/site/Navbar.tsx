@@ -49,7 +49,7 @@ export default function Navbar() {
               <span className={`text-[10px] font-medium tracking-[0.3em] uppercase leading-none mt-0.5 transition-colors ${
                 scrolled ? "text-muted-foreground" : "text-white/60"
               }`}>
-                Ibero
+                Iberia
               </span>
             </div>
           </Link>

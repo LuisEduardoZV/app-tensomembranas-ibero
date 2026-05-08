@@ -44,11 +44,11 @@ export interface Proyecto {
 ========================= */
 
 export type CategoriaProducto =
-  | "cubiertas"
-  | "estructuras"
-  | "domos"
+  | "tensomembranas"
   | "fachadas"
-  | "arquitectura-textil"; 
+  | "domos"
+  | "campamentos"
+  | "deportivo"; 
 
 export type CategoriaProyecto =
   | "deportivo"

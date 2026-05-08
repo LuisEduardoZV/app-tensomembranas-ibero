@@ -53,10 +53,10 @@ export default function HeroSlider() {
         >
           <Image
             src={slides[current].image}
-            width={768}
-            height={1184}
             alt={slides[current].project}
-            className="w-full h-full object-cover"
+            className="object-cover"
+            fill
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/45 to-black/20" />
         </motion.div>
@@ -71,7 +71,7 @@ export default function HeroSlider() {
           className="max-w-3xl"
         >
           <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-6">
-            Tensomembranas Ibero
+            Tensomembranas Iberia
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05]">
             Ingeniería que<br />transforma espacios

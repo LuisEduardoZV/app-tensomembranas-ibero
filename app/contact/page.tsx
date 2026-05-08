@@ -10,9 +10,9 @@ import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
-  { icon: MapPin, label: "Dirección", value: "Calle Industria 42, 28001 Madrid, España" },
-  { icon: Phone, label: "Teléfono", value: "+34 91 123 4567" },
-  { icon: Mail, label: "Email", value: "info@tensomembranas.com" },
+  { icon: MapPin, label: "Dirección", value: "C. del Cabo Guardia Civil Pedro Moreno Pérez, 41, 30007 Murcia, España" },
+  { icon: Phone, label: "Teléfono", value: "+34 611 240 701" },
+  { icon: Mail, label: "Email", value: "ventas@tensomembranasiberia.es" },
   { icon: Clock, label: "Horario", value: "Lunes a Viernes, 9:00 - 18:00" },
 ];
 
